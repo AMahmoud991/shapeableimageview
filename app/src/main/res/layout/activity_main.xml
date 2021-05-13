@@ -123,6 +123,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/cut_corner"
         app:srcCompat="@drawable/doge" />
@@ -135,10 +136,39 @@
         android:text="@string/cut_corner_label"
         android:textSize="30sp"
         android:gravity="center"
+        android:visibility="gone"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/cut_corner"
         app:layout_constraintStart_toStartOf="@id/cut_corner"
         app:layout_constraintTop_toBottomOf="@id/cut_corner" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/cut_corner_border"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/cut_corner"
+        android:padding="5dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="5dp"
+        app:srcCompat="@drawable/doge" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/cut_corner_border_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/cut_corner_border_label"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/cut_corner_border"
+        app:layout_constraintStart_toStartOf="@id/cut_corner_border"
+        app:layout_constraintTop_toBottomOf="@id/cut_corner_border" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

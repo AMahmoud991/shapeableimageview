@@ -5,5 +5,6 @@
     <string name="rounded_corner_label">Rounded Corner Image</string>
     <string name="rounded_corner_border_label">Rounded Corner with border Image</string>
     <string name="cut_corner_label">Cut Corner Image</string>
+    <string name="cut_corner_border_label">Cut Corner with border Image</string>
 
 </resources>
