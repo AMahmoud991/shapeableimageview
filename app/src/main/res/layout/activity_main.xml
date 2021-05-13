@@ -11,8 +11,8 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        android:layout_margin="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/circle"
@@ -26,8 +26,36 @@
         android:text="@string/circle_label"
         android:textSize="30sp"
         android:textStyle="bold"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@id/hello_circle"
         app:layout_constraintStart_toStartOf="@id/hello_circle"
         app:layout_constraintTop_toBottomOf="@id/hello_circle" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/hello_circle_border"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/border_circle"
+        app:strokeWidth="5dp"
+        app:strokeColor="@color/black"
+        app:srcCompat="@drawable/doge" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/hello_circle_border_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/border_circle_label"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/hello_circle_border"
+        app:layout_constraintStart_toStartOf="@id/hello_circle_border"
+        app:layout_constraintTop_toBottomOf="@id/hello_circle_border" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

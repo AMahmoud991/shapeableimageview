@@ -18,4 +18,8 @@
         <item name="cornerSize">50%</item>
     </style>
 
+    <style name="border_circle" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
 </resources>
