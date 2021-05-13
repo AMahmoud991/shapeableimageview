@@ -18,12 +18,12 @@
         <item name="cornerSize">50%</item>
     </style>
 
-    <style name="border_circle" parent="">
-        <item name="cornerSize">50%</item>
-    </style>
-
     <style name="rounded_corner" parent="">
         <item name="cornerSize">8dp</item>
     </style>
 
+    <style name="cut_corner" parent="">
+        <item name="cornerSize">20dp</item>
+        <item name="cornerFamily">cut</item>
+    </style>
 </resources>
