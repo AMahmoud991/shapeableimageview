@@ -19,7 +19,7 @@
         app:srcCompat="@drawable/doge" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/hcircle_label"
+        android:id="@+id/circle_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -63,6 +63,7 @@
         android:id="@+id/rounded_corner"
         android:layout_width="200dp"
         android:layout_height="200dp"
+        android:visibility="gone"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,16 +73,45 @@
         app:srcCompat="@drawable/doge" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/hello_rounded_corner_border_label"
+        android:id="@+id/rounded_corner_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/rounded_corner_label"
         android:textSize="30sp"
+        android:visibility="gone"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/rounded_corner"
         app:layout_constraintStart_toStartOf="@id/rounded_corner"
         app:layout_constraintTop_toBottomOf="@id/rounded_corner" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/rounded_corner_with_border"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/rounded_corner"
+        app:strokeWidth="5dp"
+        android:padding="5dp"
+        app:strokeColor="@color/black"
+        app:srcCompat="@drawable/doge" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/rounded_corner_border_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/rounded_corner_border_label"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/rounded_corner_with_border"
+        app:layout_constraintStart_toStartOf="@id/rounded_corner_with_border"
+        app:layout_constraintTop_toBottomOf="@id/rounded_corner_with_border" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
