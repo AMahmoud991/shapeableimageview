@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/hello_circle"
+        android:id="@+id/circle"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:scaleType="centerCrop"
@@ -19,7 +19,7 @@
         app:srcCompat="@drawable/doge" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/hello_circle_label"
+        android:id="@+id/hcircle_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -27,12 +27,12 @@
         android:textSize="30sp"
         android:textStyle="bold"
         android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="@id/hello_circle"
-        app:layout_constraintStart_toStartOf="@id/hello_circle"
-        app:layout_constraintTop_toBottomOf="@id/hello_circle" />
+        app:layout_constraintEnd_toEndOf="@id/circle"
+        app:layout_constraintStart_toStartOf="@id/circle"
+        app:layout_constraintTop_toBottomOf="@id/circle" />
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/hello_circle_border"
+        android:id="@+id/circle_border"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:scaleType="centerCrop"
@@ -43,19 +43,45 @@
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/border_circle"
         app:strokeWidth="5dp"
+        android:visibility="gone"
         app:strokeColor="@color/black"
         app:srcCompat="@drawable/doge" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/hello_circle_border_label"
+        android:id="@+id/circle_border_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/border_circle_label"
         android:textSize="30sp"
+        android:visibility="gone"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/hello_circle_border"
-        app:layout_constraintStart_toStartOf="@id/hello_circle_border"
-        app:layout_constraintTop_toBottomOf="@id/hello_circle_border" />
+        app:layout_constraintEnd_toEndOf="@id/circle_border"
+        app:layout_constraintStart_toStartOf="@id/circle_border"
+        app:layout_constraintTop_toBottomOf="@id/circle_border" />
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/rounded_corner"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/rounded_corner"
+        app:srcCompat="@drawable/doge" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/hello_rounded_corner_border_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/rounded_corner_label"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/rounded_corner"
+        app:layout_constraintStart_toStartOf="@id/rounded_corner"
+        app:layout_constraintTop_toBottomOf="@id/rounded_corner" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

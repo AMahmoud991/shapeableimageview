@@ -2,5 +2,6 @@
     <string name="app_name">ShapeableImageView</string>
     <string name="circle_label">Circle Image</string>
     <string name="border_circle_label">Border Circle Image</string>
+    <string name="rounded_corner_label">Rounded Corner Image</string>
 
 </resources>
