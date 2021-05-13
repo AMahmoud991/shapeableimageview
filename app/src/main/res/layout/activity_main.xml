@@ -10,12 +10,24 @@
         android:id="@+id/hello_circle"
         android:layout_width="200dp"
         android:layout_height="200dp"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:scaleType="centerCrop"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/circle"
         app:srcCompat="@drawable/doge" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/hello_circle_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/circle_label"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/hello_circle"
+        app:layout_constraintStart_toStartOf="@id/hello_circle"
+        app:layout_constraintTop_toBottomOf="@id/hello_circle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ShapeableImageView</string>
+    <string name="circle_label">Circle Image</string>
 </resources>
