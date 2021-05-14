@@ -8,4 +8,6 @@
     <string name="cut_corner_border_label">Cut Corner with border Image</string>
     <string name="specific_rounded_corner_label">Specific Rounded Corner</string>
     <string name="specific_cut_corner_label">Specific Cut Corner</string>
+    <string name="specific_mix_corner_label">Specific Mix Corner</string>
+
 </resources>
