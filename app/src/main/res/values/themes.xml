@@ -27,4 +27,11 @@
         <item name="cornerFamily">cut</item>
     </style>
 
+    <style name="specific_rounded_corner" parent="">
+        <item name="cornerSizeTopLeft">80dp</item>
+        <item name="cornerSizeBottomRight">80dp</item>
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+    </style>
+
 </resources>
