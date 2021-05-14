@@ -11,6 +11,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/customize_btn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/purple_500"
+            android:text="@string/customize_label"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/circle"
             android:layout_width="100dp"
@@ -19,7 +32,7 @@
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toStartOf="@id/circle_border"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/customize_btn"
             app:shapeAppearanceOverlay="@style/circle"
             app:srcCompat="@drawable/doge" />
 
@@ -44,7 +57,7 @@
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/circle"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/customize_btn"
             app:shapeAppearanceOverlay="@style/circle"
             app:srcCompat="@drawable/doge"
             app:strokeColor="@color/black"
@@ -306,15 +319,15 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
+            android:padding="5dp"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
-            app:strokeColor="@color/black"
-            app:strokeWidth="5dp"
-            android:padding="5dp"
             app:layout_constraintStart_toEndOf="@+id/specific_mix_corner"
             app:layout_constraintTop_toBottomOf="@+id/specific_cut_border_corner_label"
             app:shapeAppearanceOverlay="@style/specific_mix_corner"
-            app:srcCompat="@drawable/doge" />
+            app:srcCompat="@drawable/doge"
+            app:strokeColor="@color/black"
+            app:strokeWidth="5dp" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/specific_mix_corner_border_label"

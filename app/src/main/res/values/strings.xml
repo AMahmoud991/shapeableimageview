@@ -8,5 +8,6 @@
     <string name="specific_cut_corner_label">Specific Cut Corner</string>
 
     <string name="specific_mix_corner_label">Specific Mix Corner</string>
+    <string name="customize_label">Custom ShapeableImageView</string>
 
 </resources>
