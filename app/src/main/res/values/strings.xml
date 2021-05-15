@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">ShapeableImageView</string>
+    <string name="circle_label">Circle</string>
+    <string name="with_border">With Border</string>
+    <string name="rounded_corner_label">Rounded Corner</string>
+    <string name="cut_corner_label">Cut Corner</string>
+    <string name="specific_rounded_corner_label">Specific Rounded Corner</string>
+    <string name="specific_cut_corner_label">Specific Cut Corner</string>
+
+    <string name="specific_mix_corner_label">Specific Mix Corner</string>
+
 </resources>

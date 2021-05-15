@@ -1,18 +1,332 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/circle"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toStartOf="@id/circle_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/circle"
+            app:srcCompat="@drawable/doge" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/circle_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/circle_label"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/circle"
+            app:layout_constraintStart_toStartOf="@id/circle"
+            app:layout_constraintTop_toBottomOf="@id/circle" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/circle_border"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/circle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/circle"
+            app:srcCompat="@drawable/doge"
+            app:strokeColor="@color/black"
+            app:strokeWidth="5dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/circle_border_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/with_border"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/circle_border"
+            app:layout_constraintStart_toStartOf="@id/circle_border"
+            app:layout_constraintTop_toBottomOf="@id/circle_border" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/rounded_corner"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toStartOf="@id/rounded_corner_with_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/circle_border_label"
+            app:shapeAppearanceOverlay="@style/rounded_corner"
+            app:srcCompat="@drawable/doge" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/rounded_corner_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/rounded_corner_label"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/rounded_corner"
+            app:layout_constraintStart_toStartOf="@id/rounded_corner"
+            app:layout_constraintTop_toBottomOf="@id/rounded_corner" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/rounded_corner_with_border"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/rounded_corner"
+            app:layout_constraintTop_toBottomOf="@id/circle_border_label"
+            app:shapeAppearanceOverlay="@style/rounded_corner"
+            app:srcCompat="@drawable/doge"
+            app:strokeColor="@color/black"
+            app:strokeWidth="5dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/rounded_corner_border_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/with_border"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/rounded_corner_with_border"
+            app:layout_constraintStart_toStartOf="@id/rounded_corner_with_border"
+            app:layout_constraintTop_toBottomOf="@id/rounded_corner_with_border" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/cut_corner"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toStartOf="@id/rounded_corner_with_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rounded_corner_border_label"
+            app:shapeAppearanceOverlay="@style/cut_corner"
+            app:srcCompat="@drawable/doge" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/cut_corner_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/cut_corner_label"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/cut_corner"
+            app:layout_constraintStart_toStartOf="@id/cut_corner"
+            app:layout_constraintTop_toBottomOf="@id/cut_corner" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/cut_corner_border"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cut_corner"
+            app:layout_constraintTop_toBottomOf="@id/rounded_corner_border_label"
+            app:shapeAppearanceOverlay="@style/cut_corner"
+            app:srcCompat="@drawable/doge"
+            app:strokeColor="@color/black"
+            app:strokeWidth="5dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/cut_corner_border_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/with_border"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/cut_corner_border"
+            app:layout_constraintStart_toStartOf="@id/cut_corner_border"
+            app:layout_constraintTop_toBottomOf="@id/cut_corner_border" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/specific_rounded_corner"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toStartOf="@+id/specific_rounded_border_corner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cut_corner_border_label"
+            app:shapeAppearanceOverlay="@style/specific_rounded_corner"
+            app:srcCompat="@drawable/doge" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/specific_rounded_corner_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/specific_rounded_corner_label"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/specific_rounded_corner"
+            app:layout_constraintStart_toStartOf="@id/specific_rounded_corner"
+            app:layout_constraintTop_toBottomOf="@id/specific_rounded_corner" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/specific_rounded_border_corner"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/specific_rounded_corner"
+            app:layout_constraintTop_toBottomOf="@id/cut_corner_border_label"
+            app:shapeAppearanceOverlay="@style/specific_rounded_corner"
+            app:srcCompat="@drawable/doge"
+            app:strokeColor="@color/black"
+            app:strokeWidth="5dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/specific_rounded_border_corner_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/with_border"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/specific_rounded_border_corner"
+            app:layout_constraintStart_toStartOf="@id/specific_rounded_border_corner"
+            app:layout_constraintTop_toBottomOf="@id/specific_rounded_border_corner" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/specific_cut_corner"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toStartOf="@+id/specific_cut_border_corner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/specific_rounded_border_corner_label"
+            app:shapeAppearanceOverlay="@style/specific_cut_corner"
+            app:srcCompat="@drawable/doge" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/specific_cut_corner_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/specific_rounded_corner_label"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/specific_cut_corner"
+            app:layout_constraintStart_toStartOf="@id/specific_cut_corner"
+            app:layout_constraintTop_toBottomOf="@id/specific_cut_corner" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/specific_cut_border_corner"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/specific_cut_corner"
+            app:layout_constraintTop_toBottomOf="@id/specific_rounded_border_corner_label"
+            app:shapeAppearanceOverlay="@style/specific_cut_corner"
+            app:srcCompat="@drawable/doge"
+            app:strokeColor="@color/black"
+            app:strokeWidth="5dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/specific_cut_border_corner_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/with_border"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/specific_cut_border_corner"
+            app:layout_constraintStart_toStartOf="@id/specific_cut_border_corner"
+            app:layout_constraintTop_toBottomOf="@id/specific_cut_border_corner" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/specific_mix_corner"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toStartOf="@+id/specific_mix_border_corner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/specific_cut_border_corner_label"
+            app:shapeAppearanceOverlay="@style/specific_mix_corner"
+            app:srcCompat="@drawable/doge" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/specific_mix_corner_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/specific_mix_corner_label"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/specific_mix_corner"
+            app:layout_constraintStart_toStartOf="@id/specific_mix_corner"
+            app:layout_constraintTop_toBottomOf="@id/specific_mix_corner" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/specific_mix_border_corner"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:strokeColor="@color/black"
+            app:strokeWidth="5dp"
+            android:padding="5dp"
+            app:layout_constraintStart_toEndOf="@+id/specific_mix_corner"
+            app:layout_constraintTop_toBottomOf="@+id/specific_cut_border_corner_label"
+            app:shapeAppearanceOverlay="@style/specific_mix_corner"
+            app:srcCompat="@drawable/doge" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/specific_mix_corner_border_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/specific_mix_corner_label"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/specific_mix_border_corner"
+            app:layout_constraintStart_toStartOf="@id/specific_mix_border_corner"
+            app:layout_constraintTop_toBottomOf="@id/specific_mix_border_corner" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
